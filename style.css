@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: antiquewhite;
+    background-color: ;
+}
+
+header{
+text-align: center;
+padd
+}
+
+main{
+    background-color: beige;
+    padding: 2% 5%;
+    border: 2px solid rebeccapurple; /* APAGAR */
+    width: 70vw;
+    margin: 0 auto;
+}
+
+#add-title-text{
+   margin: 1% 0;
+}
+
+.task-add{
+    border: 1px solid red;    /* APAGAR */
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5vh;
+    
+}
+
+#main-task{
+   flex: auto;
+    
+}
+
+#add-button{
+   width: 15vw;
+    
+}
+
+.container{
+    border:  solid 1px green;     /* APAGAR */
+    display: flex;
+    flex-direction: column;
+    /* height: 80vh;
+    width: 60vw;
+    margin: 1% auto; */
+    
+}
+
+.tasks{
+    border: solid 1px blue;    /* APAGAR */
+    display: flex;
+    flex-direction: row;
+    padding: 1% 1%;
+}
+
+#task-description{
+    width: 80%;
+}
+
+#edit-button{
+    width: 10%;
+    
+}
+
+#remove-button{
+    width: 10%;
+}
+
+.inferior-field{
+    border: 3px solid blue;    /* APAGAR */
+    display: flex;
+    align-items: baseline;
+    
+}
+
+.todo{
+    flex: 1;
+}

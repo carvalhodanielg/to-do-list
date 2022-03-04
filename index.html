@@ -5,11 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My To-do List</title>
+    <link rel="stylesheet" href="./style.css">
+    
 </head>
 
 
 <body>
     
+    <header>
+        <h1>My To-Do List</h1>
+    </header>
+
+    <main>
+        <p id="add-title-text">Add your tasks!</p>
+        <div class="task-add">
+            
+                 <!--Insertion tasks area-->
+                <input type="text" id="main-task" name="main-task" placeholder="Add a task here... ">
+                <input type="button" id="add-button" name="add-button" value="Add">
+     
+        </div>
+    
+        <div class="container">
+            <!--This div contains the box where the tasks wil be placed-->
+                <div class="tasks">
+                    <input type="checkbox" id="checkbox" name="checkbox" value="done">
+                    <input type="text" name="task-description" id="task-description" Value="Your first task" disabled>
+
+                    <input type="button" name="edit-button" id="edit-button" value="Edit">
+                    <input type="button" name="remove-button" id="remove-button" value="Remove">
+                </div>
+
+                <div class="tasks">
+                    <input type="checkbox" id="checkbox" name="checkbox" value="done">
+                    <input type="text" name="task-description" id="task-description" Value="Your first task" disabled>
+
+                    <input type="button" name="edit-button" id="edit-button" value="Edit">
+                    <input type="button" name="remove-button" id="remove-button" value="Remove">
+                </div>
+            
+            
+
+        </div>
+
+
+        <div class="inferior-field">
+            <!--Here goes the filds which counts the activities  yet to-do and the filter selector-->
+            <div class="todo">
+                <h3>To-do Activities: x</h3>
+            </div>
+            <div class="filter">
+                <input type="button" id="all" name="all" value="All">
+                <input type="button" id="active" name="active" value="Active">
+                <input type="button" id="done" name="done" value="Done">
+            </div>
+
+        </div>
+        <div class="clear-all">
+            <input type="button" id="clear" name="clear" value="Clear All">
+        </div>
+
+    </main>
+
+
+
+
 </body>
 
 </html>
