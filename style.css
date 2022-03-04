@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: sans-serif; /* ver isso !!*/
 }
 
 body{
@@ -30,12 +30,12 @@ main{
     display: flex;
     flex-direction: row;
     padding-bottom: 5vh;
+  
     
 }
 
 #main-task{
    flex: auto;
-    
 }
 
 #add-button{
@@ -82,4 +82,16 @@ main{
 
 .todo{
     flex: 1;
+}
+
+footer{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin: 0 auto;
+    width: 99vw;
+}
+
+input{
+    height: 30px;
 }
