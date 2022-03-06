@@ -2,6 +2,8 @@ const mainTask = document.getElementById('main-task')
 const addButton = document.getElementById('add-button')
 const containerTasks = document.getElementById('container')
 mainTask.focus()
+var cont = 0
+
 
 // console.log(addButton)
 addButton.addEventListener('click', (event) => {
@@ -21,21 +23,37 @@ addButton.addEventListener('click', (event) => {
     mainTask.value = ""
     
 
-        // edit.addEventListener('click', (event)=> {
+        edit.addEventListener('click', (event)=> {
+            
+                    
+                    let idNumber = event.target.id.slice(11) //pega o numero da div pai do botão
+                    let buttonClicked = event.target
+                    let textSelected = document.getElementById('task-description'+idNumber)
+                    
+                if(buttonClicked.value == 'Edit'){
+                    buttonClicked.value = 'Save'
 
-        //         if(edit.value == 'Edit'){
-        //             edit.value = 'Save'
+                    textSelected.removeAttribute ("readonly")
+                    textSelected.focus()
+                }else{
+                    buttonClicked.value = 'Edit'
+                    textInput.setAttribute ('readonly','readonly')
+                }
+                
+                
+           
+        })
 
-        //             textInput.removeAttribute ("readonly")
-        //             textInput.focus()
-        //         }else{
-        //             edit.value = 'Edit'
-        //             textInput.setAttribute ('readonly','readonly')
-        //         }
+        remove.addEventListener('click', (event)=> {
+            
+            let idNumber = event.target.id.slice(14)
+            console.log('id number' + idNumber)
+            let divSelected = document.getElementById(idNumber)
+            containerTasks.removeChild(divSelected)  
+
+    })
 
 
-
-        // })
 
  
 })
@@ -45,36 +63,37 @@ addButton.addEventListener('click', (event) => {
 
 function CreateNewDiv(){
     let newTask = mainTask.value
-    //console.log(newTask)
+   cont ++
 
     tasks = document.createElement('div')
     tasks.classList.add('tasks')
+    tasks.setAttribute('id',cont)
 
     containerTasks.appendChild(tasks)
 
     checkbox = document.createElement('input')
     checkbox.type = 'checkbox' 
     checkbox.name = 'checkbox'
-    checkbox.id = 'checkbox'
+    checkbox.id = 'checkbox' + cont
     checkbox.value = 'checkbox'
 
     textInput = document.createElement('input')
     textInput.type = 'text'
     textInput.name = 'task-description'
-    textInput.id = 'task-description'
+    textInput.id = 'task-description' + cont
     textInput.value = newTask
     textInput.setAttribute('readonly', 'readonly')
 
     edit = document.createElement('input')
     edit.type = 'button'
     edit.name = 'edit-button'
-    edit.id = 'edit-buttonn'
+    edit.id = 'edit-button' + cont
     edit.value = 'Edit'
 
     remove = document.createElement('input')
     remove.type = 'button'
     remove.name = 'remove-button'
-    remove.id = 'remove-buttonn'
+    remove.id = 'remove-buttonn' + cont
     remove.value = 'Remove'
 
 
@@ -86,7 +105,7 @@ function CreateNewDiv(){
     
    
 
-    console.log(newTask)
+    console.log(cont)
     // tasks.appendChild(newContentDiv)
 
 }
