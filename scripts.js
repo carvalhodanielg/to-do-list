@@ -1,11 +1,15 @@
 const mainTask = document.getElementById('main-task')
 const addButton = document.getElementById('add-button')
 const containerTasks = document.getElementById('container')
+mainTask.focus()
 
 // console.log(addButton)
 addButton.addEventListener('click', (event) => {
     event.preventDefault()
+    
     let newTask = mainTask.value
+    mainTask.focus()
+
     if(newTask==""){
         alert("Please, add a task!")
     return
@@ -17,8 +21,6 @@ addButton.addEventListener('click', (event) => {
     mainTask.value = ""
     
  
-
-
 })
 
 function CreateNewDiv(){
