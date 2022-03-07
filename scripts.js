@@ -76,6 +76,7 @@ function CreateNewDiv(){
     checkbox.name = 'checkbox'
     checkbox.id = 'checkbox' + cont
     checkbox.value = 'checkbox'
+    checkbox.classList.add('checkbox') //teste
 
     textInput = document.createElement('input')
     textInput.type = 'text'
@@ -83,19 +84,22 @@ function CreateNewDiv(){
     textInput.id = 'task-description' + cont
     textInput.value = newTask
     textInput.setAttribute('readonly', 'readonly')
+    textInput.classList.add('task-description') //teste
 
     edit = document.createElement('input')
     edit.type = 'button'
     edit.name = 'edit-button'
     edit.id = 'edit-button' + cont
     edit.value = 'Edit'
+    edit.classList.add('edit-button') //teste
+
 
     remove = document.createElement('input')
     remove.type = 'button'
     remove.name = 'remove-button'
     remove.id = 'remove-buttonn' + cont
     remove.value = 'Remove'
-
+    remove.classList.add('remove-button') //teste
 
     tasks.appendChild(checkbox)
     tasks.appendChild(textInput)
