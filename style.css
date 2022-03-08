@@ -136,3 +136,6 @@ background-color: rgb(253, 70, 70);
     background-color: rgba(0, 255, 191, 0.596);
 }
 
+.ocult{
+    display: 	none;
+}

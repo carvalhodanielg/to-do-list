@@ -39,7 +39,7 @@ addButton.addEventListener('click', (event) => {
                     textSelected.focus()
                 }else{
                     buttonClicked.value = 'Edit'
-                    textInput.setAttribute ('readonly','readonly')
+                    
                 }  
         })
 
@@ -49,20 +49,21 @@ addButton.addEventListener('click', (event) => {
              let idNumberRemove = event.target.id.slice(14)
             //console.log('id number' + idNumberRemove)
             let divSelected = document.getElementById(idNumberRemove)
-            containerTasks.removeChild(divSelected)           
-            
+            //containerTasks.removeChild(divSelected)           
+            divSelected.classList.add('ocult')
             
             //Original abaixo
             // let idNumber = event.target.id.slice(14)
             // console.log('id number' + idNumber)
             // let divSelected = document.getElementById(idNumber)
             // containerTasks.removeChild(divSelected)  
+            
         })
         
         checkbox.addEventListener('change', function(){
             
             
-            for(let i=1; i++ ; i<cont){
+            for(let i=1; i++ ; i<checkCounter){
        
                 checkNumber = document.getElementById('checkbox' + (i-1))
                 
@@ -147,7 +148,7 @@ clearAll.addEventListener('click', (event)=> {
         if(divToClear == null){
             return
         } else{
-            containerTasks.removeChild(divToClear)
+            divToClear.classList.add('ocult')
         }
 
     }
