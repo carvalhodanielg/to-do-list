@@ -51,7 +51,7 @@ addButton.addEventListener('click', (event) => {
             let divSelected = document.getElementById(idNumberRemove)
             containerTasks.removeChild(divSelected)           
             
-         
+            
             //Original abaixo
             // let idNumber = event.target.id.slice(14)
             // console.log('id number' + idNumber)
@@ -61,32 +61,32 @@ addButton.addEventListener('click', (event) => {
         
         checkbox.addEventListener('change', function(){
             
-            VerificaCheck(checkCounter);
             
+            for(let i=1; i++ ; i<cont){
+       
+                checkNumber = document.getElementById('checkbox' + (i-1))
+                
+                if(checkNumber == null){
+                    return
+                }else if(checkNumber.checked){
+                    var text = document.getElementById('task-description'+(i-1))
+                    text.classList.add('line-through')
+                }else if(checkNumber.checked==false){
+                    var text = document.getElementById('task-description'+(i-1)) 
+                    text.classList.remove('line-through') 
+
+                   
+                }
+                
+            }
+   
         })
 
 })
 
-function VerificaCheck(){
+
     
-    for(let i=1; i++ ; i<checkCounter){
-       
-        checkNumber = document.getElementById('checkbox' + (i-1))
-        
-        if(checkNumber == null){
-            return
-        }else if(checkNumber.checked){
-            let text = document.getElementById('task-description'+(i-1))
-            text.classList.add('line-through')
-            console.log(text) 
-        }else if(checkNumber.checked==false){
-            let text = document.getElementById('task-description'+(i-1)) 
-            text.classList.remove('line-through') 
-            console.log('not checked')
-           
-        }
-    }
-}
+
 
 function CreateNewDiv(){
     let newTask = mainTask.value
@@ -149,10 +149,6 @@ clearAll.addEventListener('click', (event)=> {
         } else{
             containerTasks.removeChild(divToClear)
         }
-
-
-
-
 
     }
 
