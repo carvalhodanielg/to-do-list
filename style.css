@@ -11,7 +11,7 @@ body{
 
 header{
 text-align: center;
-padd
+
 }
 
 main{
@@ -98,3 +98,6 @@ input{
     flex: auto;
 }
 
+.line-through{
+    text-decoration: line-through;
+}

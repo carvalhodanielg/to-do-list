@@ -51,12 +51,35 @@ addButton.addEventListener('click', (event) => {
             let divSelected = document.getElementById(idNumber)
             containerTasks.removeChild(divSelected)  
 
-    })
+        })
+
+
+        checkbox.addEventListener('change', function(){
+            
+            for(let i=1; i++ ; i<cont){
+                
+                checkNumber = document.getElementById('checkbox' + (i-1))
+           
+                if(checkNumber.checked){
+                    let text = document.getElementById('task-description'+(i-1))
+                    text.classList.add('line-through')
+                }
+
+                if(checkNumber.checked==false){
+                    let text = document.getElementById('task-description'+(i-1)) 
+                    text.classList.remove('line-through')
+                }
+
+            }
+            
+        })
 
 
 
- 
+
+
 })
+
 
 
 
@@ -77,6 +100,7 @@ function CreateNewDiv(){
     checkbox.id = 'checkbox' + cont
     checkbox.value = 'checkbox'
     checkbox.classList.add('checkbox') //teste
+    
 
     textInput = document.createElement('input')
     textInput.type = 'text'
@@ -109,8 +133,7 @@ function CreateNewDiv(){
     
    
 
-    console.log(cont)
+    console.log('contador= ' + cont)
     // tasks.appendChild(newContentDiv)
 
 }
-
