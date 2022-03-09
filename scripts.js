@@ -39,6 +39,7 @@ addButton.addEventListener('click', (event) => {
                     textSelected.focus()
                 }else{
                     buttonClicked.value = 'Edit'
+                    textSelected.setAttribute ('readonly', 'readonly') //teste
                     
                 }  
         })
@@ -50,7 +51,7 @@ addButton.addEventListener('click', (event) => {
             //console.log('id number' + idNumberRemove)
             let divSelected = document.getElementById(idNumberRemove)
             //containerTasks.removeChild(divSelected)           
-            divSelected.classList.add('ocult')
+            divSelected.classList.add('hide')
             
             //Original abaixo
             // let idNumber = event.target.id.slice(14)
@@ -62,7 +63,8 @@ addButton.addEventListener('click', (event) => {
         
         checkbox.addEventListener('change', function(){
             
-            
+            // toDoActivities(cont);  //if it doesn't work, REMOVE!!!
+
             for(let i=1; i++ ; i<checkCounter){
        
                 checkNumber = document.getElementById('checkbox' + (i-1))
@@ -80,6 +82,10 @@ addButton.addEventListener('click', (event) => {
                 }
                 
             }
+
+            
+            
+
    
         })
 
@@ -148,9 +154,28 @@ clearAll.addEventListener('click', (event)=> {
         if(divToClear == null){
             return
         } else{
-            divToClear.classList.add('ocult')
+            divToClear.classList.add('hide')
         }
 
     }
 
 })
+
+
+
+// function toDoActivities(){
+//     console.log('arrop')
+//     let tasksHide = 1
+//     for (let activities = 1; activities++; activities<checkCounter){
+        
+
+//         divCount = document.getElementById(activities)
+
+//         if (divCount.classList.contains("hide")){
+//             tasksHide ++
+//         }
+
+
+
+//     }
+// }
