@@ -8,19 +8,22 @@
 body{
     background-color: antiquewhite; 
     font-family: sans-serif;
-    background-image: url(../todolist/images/back-blur.png)
+    /* background-image: url(../todolist/images/back-blur.png) */
+    background-image: linear-gradient(to bottom right, rgb(228, 227, 227),rgb(226, 223, 223));
 }
 
 header{
 text-align: center;
 font-family: 'Smooch Sans', sans-serif;
-background-color: aliceblue;
+background-color: rgb(145, 198, 245);
 font-size: 1.5em;
+color: white;
 
 }
 
 main{
-    background-color: rgba(245, 245, 220, 0.842);
+    /* background-color: rgba(245, 245, 220, 0.842); */
+    background-color: white;
     padding: 2% 5%;
     
     width: 60vw;
@@ -42,11 +45,13 @@ main{
 
 #main-task{
     flex: auto;
+    border: 1px solid grey ;
 }
 
 #add-button{
     width: 15%; 
     background-color: azure;
+    border: 1px solid grey ;
 }
 
 
@@ -64,8 +69,8 @@ main{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    padding: 1% 3% 0% 3%;
-       
+    padding: 1% 3% 1% 3%;
+    border: 1px solid rgb(162, 162, 243);   
     margin-bottom: 1%;
     
 }
@@ -109,6 +114,7 @@ input{
 
 .task-description{
     flex: auto;
+    font-size: medium;
 }
 
 .line-through{
@@ -117,26 +123,32 @@ input{
 }
 
 .edit-button{
-background-color: aliceblue;
+/* background-color: aliceblue; */
+    background-color: transparent;
+    font-weight: bold;
 }
 
 .remove-button{
-    background-color: aliceblue;
-    
-    }
+    /* background-color: aliceblue; */
+    background-color: transparent;
+    font-weight: bold;
+
+}
 
 .edit-button:hover{
 background-color: rgb(179, 215, 247);
+cursor: pointer;
 }
 
 .remove-button:hover{
-
 background-color: rgb(253, 70, 70);
+cursor: pointer;
 
 }
 
 #add-button:hover{
     background-color: rgba(0, 255, 191, 0.596);
+    cursor: pointer;
 }
 
 .hide{
@@ -146,4 +158,31 @@ background-color: rgb(253, 70, 70);
 input:focus{
     box-shadow: 0 0 0 0;
     outline: 0;
+}
+
+.checkbox{
+    /* display: flex; */
+    margin: 0;
+    size: ;
+ 
+}
+
+.checkbox:hover{
+    cursor: pointer;
+ 
+}
+
+
+
+.clear {
+    background-color: azure;
+    border: 1px grey solid;
+}
+
+.clear:hover{
+    background-color: rgb(252, 42, 42); 
+    color: white; 
+    font-weight: bold;
+    border: 1px grey solid;
+    cursor: pointer;
 }
