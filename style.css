@@ -3,7 +3,8 @@
 }
 
 body{
-    background-color: antiquewhite; 
+    /* background-color: antiquewhite;  */
+    /* background-color: rgb(31, 30, 29); */
     font-family: sans-serif;
     background-image: linear-gradient(to bottom right, rgb(228, 227, 227),rgb(226, 223, 223));
 }
@@ -169,10 +170,15 @@ input:focus{
     cursor: pointer;
 }
 
+
+
+.edit-pressed{
+    border: solid 2px red;
+}
+
 @media (max-width: 400px)
 {
     .task-description{
-        border: solid red 1px;
         flex: 1; 
         width: 30%;  
     } 
@@ -183,15 +189,19 @@ input:focus{
     }
 
     #main-task{
-        border: solid red 1px;
+
         width: 100%;
 
     }
     #add-button{
-        border: solid red 1px;
-      
-        width: 60%;
+        width: 30%;
     }
-
+    
+    main{
+        background-color: white;
+        padding: 2% 5%;
+        width: 80vw;
+        margin: 0 auto;
+    }
 
 }

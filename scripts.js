@@ -32,11 +32,13 @@ addButton.addEventListener('click', (event) => {
                     
                 if(buttonClicked.value == 'Edit'){
                     buttonClicked.value = 'Save'
+                    buttonClicked.classList.add('edit-pressed') //atenção
                     textSelected.removeAttribute ("readonly")
                     textSelected.focus()
                 }else{
                     buttonClicked.value = 'Edit'
                     textSelected.setAttribute ('readonly', 'readonly') //teste 
+                    buttonClicked.classList.remove('edit-pressed') //atenção
                 }  
         })
 
