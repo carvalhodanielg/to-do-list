@@ -133,3 +133,10 @@ clearAll.addEventListener('click', (event)=> {
     }
 
 })
+
+
+const dragArea = document.getElementById('container')
+new Sortable(dragArea, {
+    animation: 150,
+    ghostClass: 'blue-background-class'
+})
