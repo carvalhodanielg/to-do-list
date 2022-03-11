@@ -9,11 +9,11 @@ body{
 }
 
 header{
-text-align: center;
-font-family: 'Smooch Sans', sans-serif;
-background-color: rgb(145, 198, 245);
-font-size: 1.5em;
-color: white;
+    text-align: center;
+    font-family: 'Smooch Sans', sans-serif;
+    background-color: rgb(145, 198, 245);
+    font-size: 1.5em;
+    color: white;
 
 }
 
@@ -34,6 +34,7 @@ main{
     display: flex;
     flex-direction: row;
     padding-bottom: 5vh;
+    
 }
 
 #main-task{
@@ -166,4 +167,31 @@ input:focus{
     font-weight: bold;
     border: 1px grey solid;
     cursor: pointer;
+}
+
+@media (max-width: 400px)
+{
+    .task-description{
+        border: solid red 1px;
+        flex: 1; 
+        width: 30%;  
+    } 
+
+    .task-add{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #main-task{
+        border: solid red 1px;
+        width: 100%;
+
+    }
+    #add-button{
+        border: solid red 1px;
+      
+        width: 60%;
+    }
+
+
 }
